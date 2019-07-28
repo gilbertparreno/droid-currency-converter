@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Standard margin/paddings-->
+    <dimen name="mp_double">32dp</dimen>
+    <dimen name="mp_24dp">24dp</dimen>
+    <dimen name="mp_standard">16dp</dimen>
+    <dimen name="mp_half">8dp</dimen>
+    <dimen name="mp_quarter">4dp</dimen>
+
+    <!--Standard text sizes-->
+    <dimen name="text_xxs">8sp</dimen>
+    <dimen name="text_xs">10sp</dimen>
+    <dimen name="text_s">14sp</dimen>
+    <dimen name="text_m">18sp</dimen>
+    <dimen name="text_l">22sp</dimen>
+    <dimen name="text_xl">26sp</dimen>
+    <dimen name="text_xxl">32sp</dimen>
+    <dimen name="text_xxxl">46sp</dimen>
+</resources>

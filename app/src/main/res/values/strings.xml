@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">base-project</string>
+    <string name="app_name">Currency Converter</string>
+
+    <string name="lbl_currency_symbol">%1$s %2$s</string>
+    <string name="btn_convert">Convert</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_dismiss">Dismiss</string>
+    <string name="title_generic_error">Something Went Wrong</string>
+    <string name="title_success_conversion">Converted Successfully</string>
+    <string name="message_success_conversion_with_commission">You have converted %1$s %2$s to %3$s %4$s. Commission Fee - %5$s %6$s.</string>
+    <string name="message_success_conversion_free">You have converted %1$s %2$s to %3$s %4$s. (free of charge)</string>
 </resources>

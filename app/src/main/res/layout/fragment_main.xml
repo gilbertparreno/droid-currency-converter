@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerBaseMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mp_standard"
+        android:layout_marginTop="@dimen/mp_standard"
+        android:layout_marginEnd="@dimen/mp_standard"
+        app:cardCornerRadius="@dimen/mp_standard"
+        app:cardElevation="0dp"
+        app:contentPaddingBottom="@dimen/mp_24dp"
+        app:contentPaddingTop="@dimen/mp_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblCurrencyCode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_double"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_m"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="$AUD" />
+
+
+            <LinearLayout
+                android:id="@+id/containerCurrencyDropDown1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/mp_double"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblCurrencyName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_m"
+                    android:textStyle="bold"
+                    tools:text="Australian Dollar" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCurrencyDropDown1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/vec_arrow_down_24" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblAmount1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_double"
+                android:layout_marginEnd="@dimen/mp_double"
+                android:textSize="@dimen/text_xxxl"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblCurrencyCode1"
+                tools:text="9999999999999999999999" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/containerConversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mp_standard"
+        android:layout_marginTop="@dimen/mp_standard"
+        android:layout_marginEnd="@dimen/mp_standard"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/mp_standard"
+        app:cardElevation="0dp"
+        app:contentPaddingBottom="@dimen/mp_24dp"
+        app:contentPaddingTop="@dimen/mp_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerBaseMoney"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lblCurrencyCode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_double"
+                android:maxLines="1"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/text_m"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAmountConvert"
+                tools:text="$AUD" />
+
+            <LinearLayout
+                android:id="@+id/containerCurrencyDropDown2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/mp_double"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAmountConvert">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lblCurrencyName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_m"
+                    android:textStyle="bold"
+                    tools:text="Australian Dollar" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCurrencyDropDown2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/vec_arrow_down_24" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etAmountConvert"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mp_double"
+                android:layout_marginEnd="@dimen/mp_double"
+                android:textSize="@dimen/text_xxxl"
+                android:background="@null"
+                android:digits="1234567890."
+                android:hint="0"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:textColor="@color/textColorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mp_standard"
+        android:layout_marginEnd="@dimen/mp_standard"
+        android:background="@drawable/bg_btn_primary_rippled"
+        android:text="@string/btn_convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerConversion" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mp_standard"
+        android:layout_marginEnd="@dimen/mp_quarter"
+        android:background="@drawable/bg_btn_primary_rippled"
+        android:text="@string/btn_cancel"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/btnConvert"
+        app:layout_constraintTop_toBottomOf="@id/containerConversion" />
+
+    <RelativeLayout
+        android:id="@+id/containerProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgProgress"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
